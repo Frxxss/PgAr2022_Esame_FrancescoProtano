@@ -2,7 +2,11 @@ package it.unibs.fp.adventuretime;
 
 import it.unibs.fp.mylib.EstrazioniCasuali;
 import it.unibs.fp.mylib.InputDati;
-
+/**
+ * La classe Chest gestisce le casse sparse per la mappa.
+ * @author Francesco
+ *
+ */
 public class Chest {
 	
 	Arma armaCasuale = new Arma(null,0);
@@ -26,7 +30,10 @@ public class Chest {
 	public void setExtrOggetto(int extrOggetto) {
 		this.extrOggetto = extrOggetto;
 	}
-
+ /**
+  * Il metodo generaOggetto sceglie in maniera casuale che tipo di oggetto dara' la chest.
+  * @return
+  */
 	public int generaOggetto() {
 		int prob =	EstrazioniCasuali.estraiIntero(1, 100);
 		if(prob <= 40) setExtrOggetto(1);
@@ -35,7 +42,10 @@ public class Chest {
 		return getExtrOggetto();
 		
 	}
-	
+	/**
+	 * Il metodo aperturaChest apre la chest.
+	 * @param P1
+	 */
 	public void aperturaChest(Personaggio P1) {
 		generaOggetto();
 		if(getExtrOggetto()== 1) {
