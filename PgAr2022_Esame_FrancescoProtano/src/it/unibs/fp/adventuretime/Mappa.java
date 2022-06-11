@@ -60,7 +60,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i][j+1] == '#' || j-1 < 0|| j+1 > 31) {
+					if(mappa[i][j+1] == '#' || j < 0|| j > 31) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -106,7 +106,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i-1][j] == '#' || i-1 <0|| i+1 > 22) {
+					if(mappa[i-1][j] == '#' || i<0|| i > 22) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -152,7 +152,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i+1][j] == '#' || i-1 < 0|| i+1 > 22) {
+					if(mappa[i+1][j] == '#' || i < 0|| i > 22) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -198,7 +198,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[j-1][j] == '#' || j-1 < 0|| j+1 >31) {
+					if(mappa[j-1][j] == '#' || j < 0|| j >31) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -219,7 +219,7 @@ public class Mappa {
 							setMappa(mappa);
 						}
 						else if(win == false) break;
-						else if(mappa[i]j-1] == 'C') {
+						else if(mappa[i][j-1] == 'C') {
 							Chest cesta = new Chest();
 							cesta.aperturaChest(P);
 							mappa[i][j-1] = 'O';
