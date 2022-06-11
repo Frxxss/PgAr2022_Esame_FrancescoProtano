@@ -2,7 +2,11 @@ package it.unibs.fp.adventuretime;
 
 import it.unibs.fp.mylib.EstrazioniCasuali;
 import it.unibs.fp.mylib.InputDati;
-
+/**
+ * La classe battaglia gestisce lo scontro.
+ * @author Francesco
+ *
+ */
 public class Fight {
 	private int potenzaAtt;
 	private int attacco;
@@ -35,7 +39,10 @@ public class Fight {
 		this.modif = modif;
 	}
 	
-	
+	/**
+	 * Il metodo genera modificatore genera il modificatore degli attacchi.
+	 * @return
+	 */
 	public double generaModificatore() {
 	int prob =	EstrazioniCasuali.estraiIntero(1, 100);
 	if(prob <= 7.5) setModif(1.5);
@@ -44,17 +51,32 @@ public class Fight {
 	}
 		
 	
+	/**
+	 * Il metodo generaDannoP calcola il danno inflitto dal giocatore.
+	 * @param P
+	 * @return
+	 */
 	public double generaDannoP(Personaggio P) {
 		double modifP = generaModificatore();
 		double dannoP = ((((2*P.armaPG.getPotenzaA()) * P.getAttaccoInizialeP())/ (25*P.getDifesaInizialeP())) + 2) * modifP;;
 		return dannoP;
 		}
+	/**
+	 * Il metodo generaDannoM calcola il danno inflitto dal mostro.
+	 * @param M
+	 * @return
+	 */
 	public double generaDannoM(Mostro M) {
 		double modifM = generaModificatore();
 		double dannoM = ((((2*M.armaMostro.getPotenzaA()) * M.getAttaccoInizialeM())/ (25*M.getDifesaInizialeM())) + 2) * modifM;;
 		return dannoM;
 		}
-	
+	/**
+	 * Il metodo generaScontro simula uno scontro player-mostro.
+	 * @param P1
+	 * @param M1
+	 * @return
+	 */
 	public boolean generaScontro(Personaggio P1, Mostro M1 ) {
 	 boolean win;
 	do {
@@ -71,7 +93,10 @@ public class Fight {
 	}
 	return win;
 	}
-	
+	/**
+	 * Il metodo generaMostro crea un mostro.
+	 * @return
+	 */
 	public Mostro generaMostro() {
 		Mostro M = new Mostro(null,1,1,1);
 		M.setNomeM("Mostro");
@@ -80,6 +105,11 @@ public class Fight {
 		M.setVitaInizialeM(EstrazioniCasuali.estraiIntero(15, 25));
 		return M;
 	}
+	/**
+	 * Il metodo sceltaArma presenta la scelta dell'arma per il combattimento.
+	 * @param P1
+	 * @return
+	 */
 	public Arma sceltaArma(Personaggio P1) {
 		if(P1.armiPG.size() == 0) 
 		{
