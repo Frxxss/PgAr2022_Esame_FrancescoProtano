@@ -60,7 +60,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i][j+1] == '#' || i-1 > 22|| i+1 < 0) {
+					if(mappa[i][j+1] == '#' || j-1 < 0|| j+1 > 31) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -106,7 +106,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i-1][j] == '#' || i-1 > 22|| i+1 < 0) {
+					if(mappa[i-1][j] == '#' || i-1 <0|| i+1 > 22) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -152,7 +152,7 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i+1][j] == '#' || i-1 > 22|| i+1 < 0) {
+					if(mappa[i+1][j] == '#' || i-1 < 0|| i+1 > 22) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
@@ -198,13 +198,13 @@ public class Mappa {
 		for(int i = 0; i<22 ; i++) {
 			for(int j =0; j<31; j++) {
 				if(getMappa()[i][j] == 'O') {
-					if(mappa[i-1][j] == '#' || i-1 > 22|| i+1 < 0) {
+					if(mappa[j-1][j] == '#' || j-1 < 0|| j+1 >31) {
 						System.out.println("Un muro!");
 						mappa[i][j] = 'O';
 						setMappa(mappa);
 						break;
 					}
-					else if(mappa[i-1][j] == 'M') {
+					else if(mappa[j-1][j] == 'M') {
 						System.out.println("Un mostro!\n");
 						Fight lotta = new Fight();
 						lotta.sceltaArma(P);
@@ -214,15 +214,15 @@ public class Mappa {
 						
 						if(win == true) {
 							System.out.println("Puoi proseguire.");
-							mappa[i-1][j] = 'O';
+							mappa[j-1][j] = 'O';
 							mappa[i][j] = '.';
 							setMappa(mappa);
 						}
 						else if(win == false) break;
-						else if(mappa[i][i-1] == 'C') {
+						else if(mappa[i]j-1] == 'C') {
 							Chest cesta = new Chest();
 							cesta.aperturaChest(P);
-							mappa[i][i-1] = 'O';
+							mappa[i][j-1] = 'O';
 							mappa[i][j]='.';
 							setMappa(mappa);
 						}
