@@ -6,10 +6,18 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
-
+/**
+ * La classe LetturaXMl legge i file forniti dall'esterno.
+ * @author Francesco
+ *
+ */
 public class LetturaXML{
 	
-
+	/**
+	 * Il metodo leggiMappaXML e' il corpo della classe.
+	 * @param filename
+	 * @return
+	 */
 	public static char[][] leggiMappaXML(String filename){
 		String tag = "";
 		char[][] map = new char [22][31];
