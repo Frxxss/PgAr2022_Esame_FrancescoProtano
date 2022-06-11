@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import it.unibs.fp.mylib.InputDati;
-
+/**
+ * La classe Personaggio crea il personaggio.
+ * @author Francesco
+ *
+ */
 public class Personaggio {
 	
 	private String nomeP;
@@ -52,7 +56,10 @@ public class Personaggio {
 	}
 	
 	
-	
+	/**
+	 * Il metodo apriInventario apre l'inventario e consente di bere le pozioni.
+	 * @param P
+	 */
 	public void apriInventario(Personaggio P) {
 		
 		int scelta = InputDati.leggiIntero("Vuoi aprire l'inventario?\n 1. SI \n 2. NO\n", 1, 2);
