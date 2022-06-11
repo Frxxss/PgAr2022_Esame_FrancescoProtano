@@ -1,5 +1,9 @@
 package it.unibs.fp.adventuretime;
-
+/**
+ * La classe Mostro crea i mostri.
+ * @author Francesco
+ *
+ */
 public class Mostro {
 	private String nomeM;
 	private double vitaInizialeM;
@@ -43,10 +47,7 @@ public class Mostro {
 		this.attaccoInizialeM = attaccoInizialeM;
 		this.difesaInizialeM = difesaInizialeM;
 	}
-	public boolean morteM() {
-		if(getVitaInizialeM() == 0) return true;
-		else return false;
-	}
+	
 	
 
 }
