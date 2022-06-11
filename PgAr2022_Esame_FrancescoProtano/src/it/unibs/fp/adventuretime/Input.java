@@ -1,7 +1,11 @@
 package it.unibs.fp.adventuretime;
 
 import it.unibs.fp.mylib.InputDati;
-
+/**
+ * La classe Input gestisce l'input dei dati.
+ * @author Francesco
+ *
+ */
 public class Input {
 
 	private char input;
@@ -18,7 +22,11 @@ public class Input {
 	public void setInput(char input) {
 		this.input = input;
 	}
-	
+	/**
+	 * Il metodo ispezionaInput permette esegue azioni diverse in base all'input ricevuto.
+	 * @param mappa
+	 * @param P
+	 */
 	public void ispezionaInput(Mappa mappa,Personaggio P) {
 		input = InputDati.leggiChar("Scegli cosa fare.\n");
 		
