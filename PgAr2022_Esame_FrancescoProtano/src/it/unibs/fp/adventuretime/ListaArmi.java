@@ -1,7 +1,7 @@
 package it.unibs.fp.adventuretime;
 
 import it.unibs.fp.mylib.EstrazioniCasuali;
-
+//*La classe ListaArmi elenca e denomina le armi.
 public class ListaArmi {
 	
 	Arma spada = new Arma("Spada degli Abissi", EstrazioniCasuali.estraiIntero(35, 55) );
@@ -10,7 +10,10 @@ public class ListaArmi {
 	Arma lancia = new Arma("Bastone della Giustizia", EstrazioniCasuali.estraiIntero(35, 55));
 	Arma tirapugni = new Arma("ScassaMandibole", EstrazioniCasuali.estraiIntero(35, 55));
 	
-	
+	/**
+	 * il metodo estraiArma sceglie casualmente un arma.
+	 * @return
+	 */
 	public Arma estraiArma() {
 		int sceltaArma = EstrazioniCasuali.estraiIntero(1, 5);
 		Arma arma = new Arma(null,0);
