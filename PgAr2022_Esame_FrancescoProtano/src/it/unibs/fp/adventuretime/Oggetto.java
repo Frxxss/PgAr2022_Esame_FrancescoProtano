@@ -1,5 +1,9 @@
 package it.unibs.fp.adventuretime;
-
+/**
+ * La classe Oggetto e' utile per le pozioni.
+ * @author Francesco
+ *
+ */
 public class Oggetto {
 	
 	private String nome;
