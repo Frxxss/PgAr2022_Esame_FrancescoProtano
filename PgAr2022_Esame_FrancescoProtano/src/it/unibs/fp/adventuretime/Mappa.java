@@ -1,5 +1,9 @@
 package it.unibs.fp.adventuretime;
-
+/**
+ * La classe mappa genera la mappa graficamente e rende possibile il movimento.
+ * @author Francesco
+ *
+ */
 public class Mappa {
 	char[][] mappa = new char[22][31];
 	
