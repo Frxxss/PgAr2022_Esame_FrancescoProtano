@@ -1,5 +1,9 @@
 package it.unibs.fp.adventuretime;
-
+/**
+ * La classe Arma crea le armi.
+ * @author Francesco
+ *
+ */
 public class Arma extends Oggetto{
 	
 	private String nomeA;
